@@ -1,6 +1,6 @@
 {
   "$schema":"http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/containers/page.json",
+  "id":"https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/slots/page.json",
 
   "title": "Page",
   "description": "Page acts as a container for other content blocks",
