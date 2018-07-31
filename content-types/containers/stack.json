@@ -1,0 +1,48 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/containers/stack.json",
+
+  "title": "Content Stack",
+  "description": "Stack acts as a container for other content blocks",
+
+  "allOf":[
+    {
+      "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+
+  "type":"object",
+  "properties":{
+
+    "content": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+          {
+            "properties": {
+              "contentType": {
+                "title": "",
+                "enum": [
+                  "https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/blocks/image-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/blocks/video-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/blocks/text-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/blocks/hero-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/blocks/split-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/containers/carousel.json",
+                  "https://raw.githubusercontent.com/techiedarren/anyafinn-content-types/master/content-types/containers/grid.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 15,
+      "title": "Content",
+      "description": "add any content block into the content stack"
+    }
+
+  },
+
+  "propertyOrder": ["content"]
+}
